@@ -1,0 +1,18 @@
+Generel kod är ok att låta vara men stylea om.
+för kommentarer
+
+create ett form -- kolla på create posts
+-- schema för comments behöver uppdateras
+sätt att hitta post id behövs
+sätt att hitta user id behövs
+
+göra ett form för att skapa kommentar
+
+göra en knapp som togglar formet
+
+edit 
+delete 
+
+plocka ut kommentarerna för den posten
+fetch
+render comments

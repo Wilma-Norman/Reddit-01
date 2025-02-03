@@ -3,12 +3,12 @@
 import { useMutation } from '@tanstack/react-query'
 import { toast } from 'sonner'
 
-import { deletePost } from '@/actions/delete-post'
+import { deleteComment } from '@/actions/delete-comment'
 import { Button } from './button'
 
-export const DeletePostButton = ({ postId }: { postId: string }) => {
+export const DeleteCommentButton = ({ commentId }: { commentId: string }) => {
   const { mutate } = useMutation({
-    mutationFn: () => deletePost(postId),
+    mutationFn: () => deleteComment(commentId),
     onError: (error) => toast.error(error.message),
     onSuccess: () => toast.success('your post was deleted!'),
     onMutate: () => toast.loading('deleting post...'),

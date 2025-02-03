@@ -9,9 +9,13 @@ const variants = cva(
   {
     variants: {
       variant: {
-        primary: 'hover:bg-primary-600 bg-primary text-white',
+        blue: 'blue bg-secondary outline outline-primary',
+        pink: 'pink bg-secondary outline outline-primary',
+        primary:
+          'hover:bg-primary-600 bg-primary outline outline-primary hover:bg-secondary text-white',
         secondary: 'bg-zinc-800 text-white hover:bg-slate-700',
-        tertiary: 'text-zinc-800 hover:bg-zinc-200',
+        tertiary:
+          'text-zinc-800 pink bg-accent outline-secondary outline hover:bg-secondary',
       },
     },
     defaultVariants: {

@@ -12,23 +12,30 @@ export const Header = async () => {
   } = await supabase.auth.getUser()
 
   return (
-    <header className='flex h-16 w-full items-center justify-between gap-4 px-4 py-2 md:px-20'>
-      <Link href='/' className='text-2xl font-bold'>
-        reddit
-      </Link>
-      <SearchBar />
-      {user ? (
-        <div className='flex gap-4'>
-          <Button as={Link} href='/create'>
-            create post
+    <header className='flex min-h-16 w-full flex-col items-center justify-between gap-4 bg-secondary p-2 md:flex-row md:px-4 md:py-2'>
+      <div className='flex w-full flex-row items-center justify-between gap-2 md:w-10/12'>
+        <Link
+          href='/'
+          className='min-w-[90px] rounded bg-primary p-1 text-2xl font-bold'
+        >
+          Vice-it
+        </Link>
+        <SearchBar />
+      </div>
+      <div className='ml-auto'>
+        {user ? (
+          <div className='flex gap-4'>
+            <Button as={Link} href='/create-post'>
+              create post
+            </Button>
+            <LogOutButton />
+          </div>
+        ) : (
+          <Button as={Link} href='/auth/log-in'>
+            Log in
           </Button>
-          <LogOutButton />
-        </div>
-      ) : (
-        <Button as={Link} href='/auth/log-in'>
-          Log in
-        </Button>
-      )}
+        )}
+      </div>
     </header>
   )
 }
