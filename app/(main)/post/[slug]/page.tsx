@@ -42,18 +42,18 @@ export default async function PostPage({
   })
 
   return (
-    <main className='main'>
-      <article className='blue mb-4 space-y-4 rounded bg-secondary p-4'>
+    <main className='main bg-[#808080] p-5 rounded-2xl drop-shadow-2xl'>
+      <article className='space-y-4'>
         <header className='flex items-start justify-between'>
           <div className='space-y-1'>
-            <span className='text-zinc-600'>{post.users?.email}</span>
+            <span className='text-black'>{post.users?.email}</span>
             <h1 className='text-2xl font-bold'>{post.title}</h1>
           </div>
         </header>
         <p>{post.content} </p>
         {isAuthor && (
           <div className='items-right flex gap-3'>
-            <Button as={Link} href={`/post/${params.slug}/edit`} variant='pink'>
+            <Button as={Link} href={`/post/${params.slug}/edit`}>
               edit
             </Button>
             <DeletePostButton postId={post.id} />

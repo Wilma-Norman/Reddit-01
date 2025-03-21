@@ -26,8 +26,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, Props>(
         <label
           htmlFor={name}
           className={cn(
-            'absolute -top-2 left-2 cursor-text text-xs text-zinc-500 transition-all',
-            'peer-focus-visible:-top-2 peer-focus-visible:left-2 peer-focus-visible:cursor-default peer-focus-visible:text-xs peer-focus-visible:text-zinc-700',
+            'absolute -top-2 left-2 cursor-text text-xs text-black transition-all',
+            'peer-focus-visible:-top-2 peer-focus-visible:left-2 peer-focus-visible:cursor-default peer-focus-visible:text-xs peer-focus-visible:text-black',
             'peer-placeholder-shown:left-4 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base',
           )}
         >

@@ -51,7 +51,7 @@ export const EditPostForm = ({
         label='content'
         error={errors.content}
       />
-      <Button>{isPending ? 'saving changes...' : 'save changes'}</Button>
+      <Button type='submit'>{isPending ? 'saving changes...' : 'save changes'}</Button>
     </form>
   )
 }

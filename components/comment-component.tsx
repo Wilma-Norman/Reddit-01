@@ -34,7 +34,7 @@ export const CommentComponent = ({
       )}
       <div className='flex w-full justify-end gap-4 pt-4'>
         {isCommentAuthor && (
-          <Button variant='blue' onClick={() => setActiveEdit(!activeEdit)}>
+          <Button onClick={() => setActiveEdit(!activeEdit)} variant='secondary'>
             {activeEdit ? 'Cancel' : 'Edit'}
           </Button>
         )}

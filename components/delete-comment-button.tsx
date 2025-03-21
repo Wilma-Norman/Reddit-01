@@ -16,7 +16,7 @@ export const DeleteCommentButton = ({ commentId }: { commentId: string }) => {
   })
 
   return (
-    <Button onClick={() => mutate()} variant='pink'>
+    <Button onClick={() => mutate()}>
       delete
     </Button>
   )

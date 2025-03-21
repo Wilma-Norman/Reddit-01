@@ -6,16 +6,4 @@
   .main {
     @apply my-6 w-full max-w-3xl px-6;
   }
-
-  .pink {
-    --color-primary: #ec6ead; /* Vibrant pink */
-    --color-secondary: #ff89bb; /* Soft neon pink */
-    --color-accent: #ffc4d6; /* Light pastel pink */
-  }
-
-  .blue {
-    --color-primary: #3494e6; /* Bright blue */
-    --color-secondary: #00c6fb; /* Cyan neon blue */
-    --color-accent: #a0e9ff; /* Soft sky blue */
-  }
 }

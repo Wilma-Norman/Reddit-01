@@ -14,11 +14,11 @@ export const HomePost = ({
   return (
     <Link
       href={`/post/${slug}`}
-      className='pink bg-accent flex w-full flex-col rounded-3xl p-4'
+      className='flex w-full flex-col rounded-3xl border-2 border-[#ff4500] bg-[#868686] p-4'
     >
-      <span className='text-zinc-600'>{author}</span>
+      <span className='font-bold text-md p-2'>{author}</span>
       {image ? <img src={image} alt='' /> : null}
-      <h2 className='text-lg font-bold'>{title}</h2>
+      <h2 className='text-lg font-bold m-2'>{title}</h2>
     </Link>
   )
 }

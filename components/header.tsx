@@ -12,30 +12,24 @@ export const Header = async () => {
   } = await supabase.auth.getUser()
 
   return (
-    <header className='flex min-h-16 w-full flex-col items-center justify-between gap-4 bg-secondary p-2 md:flex-row md:px-4 md:py-2'>
-      <div className='flex w-full flex-row items-center justify-between gap-2 md:w-10/12'>
-        <Link
-          href='/'
-          className='min-w-[90px] rounded bg-primary p-1 text-2xl font-bold'
-        >
-          Vice-it
-        </Link>
-        <SearchBar />
+    <header className='md:flex md:h-16 md:w-full md:items-center md:justify-between md:gap-4 px-4 md:py-2 md:px-20'>
+    <Link href='/' className='md:text-2xl md:font-bold text-2xl font-bold justify-center flex m-1'>
+      Postit
+    </Link>
+    <SearchBar />
+    {user ? (
+      <div className='md:flex md:gap-4 p-2 border-b md:border-none'>
+        <Button as={Link} href='/create-post'>
+          create post
+        </Button>
+        <LogOutButton />
       </div>
-      <div className='ml-auto'>
-        {user ? (
-          <div className='flex gap-4'>
-            <Button as={Link} href='/create-post'>
-              create post
-            </Button>
-            <LogOutButton />
-          </div>
-        ) : (
-          <Button as={Link} href='/auth/log-in'>
-            Log in
-          </Button>
-        )}
-      </div>
-    </header>
-  )
+    ) : (
+      <Button as={Link} href='/auth/log-in'>
+        Log in
+      </Button>
+    )}
+  </header>
+)
 }
+

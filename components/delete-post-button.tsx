@@ -16,7 +16,7 @@ export const DeletePostButton = ({ postId }: { postId: string }) => {
   })
 
   return (
-    <Button onClick={() => mutate()} variant='pink'>
+    <Button onClick={() => mutate()}>
       delete
     </Button>
   )

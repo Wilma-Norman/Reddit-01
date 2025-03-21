@@ -5,7 +5,7 @@ import { Button } from './button'
 
 export const LogOutButton = () => {
   return (
-    <Button variant='tertiary' onClick={() => logOut()}>
+    <Button className='bg-black text-white' variant='tertiary' onClick={() => logOut()}>
       log out
     </Button>
   )

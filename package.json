@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "get-types": "npx supabase gen types typescript --project-id swoioljqdvozavxbddsv > utils/supabase/database.types.ts",
+    "get-types": "npx supabase gen types typescript --project-id wyrlfljxmlgszdpvgdop > utils/supabase/database.types.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,7 +15,7 @@
     "@tanstack/react-query": "^5.62.0",
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.445.0",
-    "next": "14.2.13",
+    "next": "^14.2.25",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.1",
