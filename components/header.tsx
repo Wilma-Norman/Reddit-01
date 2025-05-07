@@ -12,14 +12,14 @@ export const Header = async () => {
   } = await supabase.auth.getUser()
 
   return (
-    <header className='md:flex md:h-16 md:w-full md:items-center md:justify-between md:gap-4 bg-[#FFF1E8] shadow-lg px-4 md:py-2 md:px-20'>
+    <header className='md:flex md:h-16 w-full md:items-center md:justify-between md:gap-4 bg-[#FFF1E8] shadow-lg px-4 md:py-2 md:px-20'>
     <Link href='/' className='md:text-2xl md:font-bold text-3xl font-bold justify-center flex m-1'>
       Postit
     </Link>
     <SearchBar />
     {user ? (
-      <div className='md:flex md:gap-4 p-2 border-b md:border-none'>
-        <Button as={Link} href='/create-post'>
+      <div className='m-2 flex justify-center md:gap-4 p-2'>
+        <Button as={Link} href='/create-post' className="mr-2">
           create post
         </Button>
         <LogOutButton />
