@@ -16,8 +16,8 @@ export const DeletePostButton = ({ postId }: { postId: string }) => {
   })
 
   return (
-    <Button onClick={() => mutate()}>
-      delete
+    <Button onClick={() => mutate()} className="bg-[#FFF1E8] shadow-lg">
+      delete 
     </Button>
   )
 }

@@ -12,8 +12,8 @@ export const Header = async () => {
   } = await supabase.auth.getUser()
 
   return (
-    <header className='md:flex md:h-16 md:w-full md:items-center md:justify-between md:gap-4 px-4 md:py-2 md:px-20'>
-    <Link href='/' className='md:text-2xl md:font-bold text-2xl font-bold justify-center flex m-1'>
+    <header className='md:flex md:h-16 md:w-full md:items-center md:justify-between md:gap-4 bg-[#FFF1E8] shadow-lg px-4 md:py-2 md:px-20'>
+    <Link href='/' className='md:text-2xl md:font-bold text-3xl font-bold justify-center flex m-1'>
       Postit
     </Link>
     <SearchBar />

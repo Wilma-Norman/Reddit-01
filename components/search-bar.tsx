@@ -25,7 +25,7 @@ export const SearchBar = () => {
 
   return (
     <div className='relative w-full max-w-lg'>
-      <div className='flex w-full items-center gap-2 rounded-full bg-[#868686] border-2 border-[#ff4500] px-4 py-2 text-black'>
+      <div className='flex w-full items-center gap-2 rounded-full bg-[#FFF1E8] border-[#92BC66] border-2 px-4 py-2 text-black'>
         <label htmlFor='search'>
           <Search size={20} />
         </label>
@@ -37,7 +37,7 @@ export const SearchBar = () => {
             setQuery(event.target.value)
           }}
           placeholder='search...'
-          className='text-black outline-none bg-[#868686]'
+          className='text-black outline-none bg-[#FFF1E8]'
         />
       </div>
       {data && (

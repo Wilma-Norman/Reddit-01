@@ -7,3 +7,12 @@
     @apply my-6 w-full max-w-3xl px-6;
   }
 }
+
+body {
+  background-image: url('../images/green.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Makes it stay fixed while scrolling */
+  min-height: 100vh; 
+}

@@ -22,7 +22,7 @@ export const CommentContainer = ({
   const [active, toggleActive] = useState(false)
 
   return (
-    <div className='border-black border-2 p-5 text-lg rounded-2xl'>
+    <div className='p-5 text-lg rounded-2xl shadow-lg'>
       <Button onClick={() => toggleActive(!active)}>
         {active ? 'Close' : 'Comment'}
       </Button>

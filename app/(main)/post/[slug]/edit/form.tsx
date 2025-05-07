@@ -45,13 +45,13 @@ export const EditPostForm = ({
       onSubmit={handleSubmit((values) => mutate({ data: values, postId }))}
       className='flex w-full flex-col gap-4'
     >
-      <Input {...register('title')} label='title' error={errors.title} />
+      <Input {...register('title')} type='text' label='title' error={errors.title} />
       <Textarea
         {...register('content')}
         label='content'
         error={errors.content}
       />
-      <Button type='submit'>{isPending ? 'saving changes...' : 'save changes'}</Button>
+      <Button>{isPending ? 'saving changes...' : 'save changes'}</Button>
     </form>
   )
 }

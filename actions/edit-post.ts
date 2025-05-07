@@ -6,7 +6,6 @@ import { z } from 'zod'
 
 import { postSchema } from './schemas'
 import { createClient } from '@/utils/supabase/server'
-import { uploadImage } from '@/utils/supabase/upload-image'
 import { slugify } from '@/utils/slugify'
 
 export const editPost = async ({
@@ -43,21 +42,9 @@ export const editPost = async ({
     throw new Error("you're not allowed to edit this post")
   }
 
-  const imageFile = data.image.get('image')
-  if (!(imageFile instanceof File) && imageFile !== null) {
-    throw new Error('malformed image')
-  }
-
-  const imagePublicUrl = imageFile ? await uploadImage(imageFile) : null
-
-  //skapa en bucket i supabase dashboarden     ---klar
-  //util/upload-image      ----klar
-  // sedan i edit och create-posts behgöver vi göra om så att vi tar ut bild filen ur formdata
-  //sedan göra upload-image functionen så den laddar upp till supabase
-  // sedan skicka url till supabase här
   const { data: updatedPost } = await supabase
     .from('posts')
-    .update({ ...parsedData, slug: slugify(data.title), image: imagePublicUrl })
+    .update({ ...parsedData, slug: slugify(data.title) })
     .eq('id', postId)
     .select('slug')
     .single()

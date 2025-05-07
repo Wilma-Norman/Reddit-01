@@ -13,10 +13,13 @@ export const signUpSchema = z.object({
 export const postSchema = z.object({
   title: z.string().min(3, 'title must be at least 3 characters'),
   content: z.string().optional(),
-  image: z.instanceof(FormData),
 })
 
 export const commentSchema = z.object({
   postId: z.string(),
   text: z.string().min(1, 'comment must be at least 1 character'),
 })
+
+
+
+// image: z.instanceof(FormData),

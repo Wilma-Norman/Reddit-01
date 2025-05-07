@@ -1,11 +1,9 @@
 'use server'
 
-//import { redirect } from 'next/navigation'
-
 import { createClient } from '@/utils/supabase/server'
 import { revalidatePath } from 'next/cache'
 
-export const deleteComment = async (commentId: string) => {
+export const deleteComment = async (commentId: string, postId: string) => {
   const supabase = createClient()
 
   const { data: post } = await supabase

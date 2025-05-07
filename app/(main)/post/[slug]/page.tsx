@@ -42,25 +42,27 @@ export default async function PostPage({
   })
 
   return (
-    <main className='main bg-[#808080] p-5 rounded-2xl drop-shadow-2xl'>
-      <article className='space-y-4'>
+    <main className='main'>
+      <article className='space-y-4 bg-[#E993B0] border-2 rounded-2xl p-5  drop-shadow-2xl'>
         <header className='flex items-start justify-between'>
           <div className='space-y-1'>
             <span className='text-black'>{post.users?.email}</span>
             <h1 className='text-2xl font-bold'>{post.title}</h1>
           </div>
         </header>
-        <p>{post.content} </p>
+        <p>{post.content} </p>  
         {isAuthor && (
-          <div className='items-right flex gap-3'>
-            <Button as={Link} href={`/post/${params.slug}/edit`}>
-              edit
+          <div className='justify-end flex gap-3'>
+            <Button as={Link} href={`/post/${params.slug}/edit`} className="bg-black  text-white shadow-lg">
+              Edit
             </Button>
             <DeletePostButton postId={post.id} />
           </div>
-        )}
+        )}      
       </article>
+      <div className="bg-[#FFF1E8] rounded-2xl border-2 mt-5">
       <CommentContainer data={commentList} postId={post.id} />
+        </div>
     </main>
   )
 }

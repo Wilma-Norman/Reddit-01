@@ -14,7 +14,7 @@ export const HomePost = ({
   return (
     <Link
       href={`/post/${slug}`}
-      className='flex w-full flex-col rounded-3xl border-2 border-[#ff4500] bg-[#868686] p-4'
+      className='flex w-full flex-col rounded-3xl border-2 bg-[#E993B0] p-6'
     >
       <span className='font-bold text-md p-2'>{author}</span>
       {image ? <img src={image} alt='' /> : null}
