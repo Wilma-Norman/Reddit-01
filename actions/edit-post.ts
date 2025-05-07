@@ -42,9 +42,12 @@ export const editPost = async ({
     throw new Error("you're not allowed to edit this post")
   }
 
+  const { image, ...updateData } = parsedData
+
+
   const { data: updatedPost } = await supabase
     .from('posts')
-    .update({ ...parsedData, slug: slugify(data.title) })
+    .update({ ...updateData, slug: slugify(parsedData.title) })
     .eq('id', postId)
     .select('slug')
     .single()
