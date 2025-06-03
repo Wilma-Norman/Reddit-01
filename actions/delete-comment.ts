@@ -15,12 +15,7 @@ export const deleteComment = async (commentId: string, postId: string) => {
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  const isAuthor = user && user.id === post?.user_id
-
-  if (!isAuthor) {
-    throw new Error("you're not allowed to delete this post")
-  }
-
+ 
   await supabase.from('comments').delete().eq('id', commentId).throwOnError()
 
   revalidatePath('/')
